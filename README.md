@@ -1,16 +1,6 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next.js + Electron + Bootstrap Project
 
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+This project is a sample Next.js application integrated with Electron and Bootstrap. It demonstrates how to set up a development environment and build a production-ready desktop application using these technologies.
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
@@ -22,17 +12,74 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+## Prerequisites
 
-To learn more about Next.js, take a look at the following resources:
+- Node.js (recommended version: 14.x or higher)
+- NPM (recommended version: 6.x or higher) or Yarn (recommended version: 1.x or higher)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Getting Started
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+To get started, follow these steps:
 
-## Deploy on Vercel
+1. Clone the repository:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+https://github.com/Mojtaba-Hassan-Erfani/NextJs-Electron-Setup.git
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+2. Change into the project directory:
+
+cd NextJs-Electron-Setup
+
+
+3. Install the dependencies:
+
+npm install
+
+4. Start the development server:
+
+npm run dev
+
+
+5. Start Electron in development mode:
+
+npm run electron
+
+6. Or start both nextjs and electron dev concurrently. No need for step 4 and 5 then.
+
+npm run electron-dev
+
+
+Now, the Next.js app should be running in an Electron window.
+
+## Available Scripts
+
+The following scripts are available in the `package.json` file:
+
+- `dev`: Starts the Next.js development server
+- `build`: Builds the Next.js application for production
+- `start`: Starts the Next.js production server
+- `lint`: Lints the code using Next.js Lint
+- `electron`: Starts Electron using the `electron.js` configuration file
+- `electron-build`: Builds the Electron application for production
+- `electron-rebuild`: Rebuilds the native modules for Electron
+- `electron-dev`: Starts the Next.js app and Electron concurrently in development mode
+- `package`: Packages the Electron application without publishing it
+
+## Building the Application for Production
+
+To build the application for production, run the following command:
+
+npm run build
+
+
+After the build is complete, you can start the Next.js production server by running:
+
+npm run start
+
+
+To package the Electron application for production, run:
+
+npm run electron-build
+
+
+You will find the packaged application in the `dist` directory.
